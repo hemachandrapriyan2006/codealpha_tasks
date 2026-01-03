@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Image Gallery</h1>
+
+<!-- Filter Buttons -->
+<div class="filters">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+</div>
+
+<!-- Gallery -->
+<div class="gallery">
+    <img src="nature.jpg" class="image nature" onclick="openLightbox(0)">
+    <img src="nature1.jpg" class="image nature" onclick="openLightbox(1)">
+    <img src="nature2.jpg" class="image nature" onclick="openLightbox(2)">
+    <img src="city1.jpg" class="image city" onclick="openLightbox(3)">
+    <img src="city2.jpg" class="image city" onclick="openLightbox(4)">
+    <img src="city3.jpg" class="image city" onclick="openLightbox(5)">
+    <img src="car.jpg" class="image car" onclick="openLightbox(6)">
+    <img src="pet.jpg" class="image pet" onclick="openLightbox(7)">
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">×</span>
+    <button class="prev" onclick="changeImage(-1)">❮</button>
+    <img id="lightbox-img">
+    <button class="next" onclick="changeImage(1)">❯</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
